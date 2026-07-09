@@ -6,7 +6,7 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section className="flex flex-col gap-12 mt-16 relative">
+    <section id="how-it-works" className="flex flex-col gap-12 mt-16 relative">
       <h2 className="font-display-xl text-display-xl text-center bg-white px-6 py-2 brutalist-border brutalist-shadow inline-block self-center ">
         HOW IT WORKS
       </h2>

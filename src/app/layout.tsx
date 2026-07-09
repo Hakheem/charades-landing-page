@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: " - Kenyan Charades App",
-  description: "The ultimate Kenyan charades game. Tilt to guess, act it out!",
+  title: "Vaibuu - Kenyan Charades App",
+  description: "The ultimate Kenyan charades game. Tilt to guess, act it out.",
 };
 
 export default function RootLayout({
@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased light`}
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased light scroll-smooth scroll-pt-36`}
     >
       <head>
         <link

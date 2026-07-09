@@ -6,7 +6,7 @@ export default function Leaderboard() {
   ];
 
   return (
-    <section className="bg-zine-ink text-white p-8 md:p-12 brutalist-shadow mt-16 relative rotate-p-2 overflow-hidden border-4 border-zine-ink">
+    <section id="leaderboard" className="bg-zine-ink text-white p-8 md:p-12 brutalist-shadow mt-16 relative rotate-p-2 overflow-hidden border-4 border-zine-ink">
       <div className="absolute inset-0 halftone-bg opacity-20 pointer-events-none mix-blend-overlay"></div>
       <div className="relative z-10 flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
         <div className="flex items-center gap-4">
