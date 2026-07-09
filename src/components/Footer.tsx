@@ -20,7 +20,7 @@ export default function Footer() {
         <div className="flex flex-col gap-2">
           <h5 className="font-utility-mono font-bold text-zine-ink mb-2">EXPLORE</h5>
           {['Home', 'Game Modes', 'How to Play', 'Download'].map((link) => (
-            <a key={link} href={`#${link.toLowerCase().replace(' ', '-')}`} className="font-utility-mono text-sm hover:text-sheng-violet transition-colors">
+            <a key={link} href={`/#${link.toLowerCase().replace(' ', '-')}`} className="font-utility-mono text-sm hover:text-sheng-violet transition-colors">
               {link}
             </a>
           ))}
