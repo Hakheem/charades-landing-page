@@ -15,20 +15,27 @@ export default function GameModes() {
         <div className="h-1 flex-grow bg-zine-ink/20"></div>
       </div>
 
-      <div className="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory hide-scrollbar md:hidden">
-        {modes.map((mode, index) => <ModeCard key={`m-${index}`} mode={mode} />)}
+      {/* MOBILE SLIDER: Force w-full items inside the slider to mimic grid-cols-1 */}
+      <div className="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory hide-scrollbar md:hidden w-full">
+        {modes.map((mode, index) => <ModeCard key={`m-${index}`} mode={mode} isMobileSlider />)}
       </div>
 
+      {/* DESKTOP GRID */}
       <div className="hidden md:grid md:grid-cols-3 gap-6">
-        {modes.map((mode, index) => <ModeCard key={`d-${index}`} mode={mode} isGrid />)}
+        {modes.map((mode, index) => <ModeCard key={`d-${index}`} mode={mode} />)}
       </div>
     </section>
   );
 }
 
-function ModeCard({ mode, isGrid }: { mode: any, isGrid?: boolean }) {
+// Updated prop name to be explicit about mobile vs desktop layout behavior
+function ModeCard({ mode, isMobileSlider }: { mode: any, isMobileSlider?: boolean }) {
   return (
-    <div className={`${isGrid ? 'w-full' : 'min-w-[280px]'} flex-shrink-0 bg-white p-6 brutalist-border brutalist-shadow hover:translate-y-[-8px] transition-all duration-300 snap-center group cursor-pointer`}>
+    <div 
+      className={`${
+        isMobileSlider ? 'w-full min-w-full' : 'w-full'
+      } flex-shrink-0 bg-white p-6 brutalist-border brutalist-shadow hover:translate-y-[-8px] transition-all duration-300 snap-center group cursor-pointer`}
+    >
       <div className={`h-32 ${mode.bgColor} mb-6 brutalist-border flex items-center justify-center relative overflow-hidden`}>
         <div className="absolute inset-0 halftone-bg opacity-20"></div>
         <span className={`material-symbols-outlined text-[64px] ${mode.iconColor} z-10`}>{mode.icon}</span>

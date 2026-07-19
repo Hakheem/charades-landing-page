@@ -2,9 +2,9 @@ import Link from 'next/link';
 
 export default function Navbar() {
   return (
-    <nav id="home" className="w-full sticky top-0 z-50 bg-white border-b-4 border-zine-ink flex justify-between items-center px-6 py-5">
+    <nav id="home" className="w-full sticky top-0 z-50 bg-white border-b-4 gap-10 border-zine-ink flex justify-between items-center px-6 py-5">
       {/* Brand Logo */}
-      <Link href="/" className="font-display-xl text-2xl text-zine-ink border-2 border-zine-ink px-3 py-1 cursor-pointer hover:bg-zinc-100 transition-colors">
+      <Link href="/" className="md:font-display-xl font-display-lg text-md md:text-2xl text-zine-ink border-2 border-zine-ink px-3 py-1 cursor-pointer hover:bg-zinc-100 transition-colors">
         VAIBUU
       </Link>
 
